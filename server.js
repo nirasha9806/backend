@@ -58,12 +58,9 @@ app.use('/api/attendee', attendeeRoute);
 app.use('/api/login', loginRoute);
 
 
-//DB config
-const db = require('./config/keys').mongoURI;
-
 //connect to Mongo
 mongoose
-    .connect(db, {
+    .connect("mongodb+srv://user1:user123@cluster0.99npm.mongodb.net/ICAF?retryWrites=true&w=majority", {
         useCreateIndex: true,
         useNewUrlParser:true,
         useUnifiedTopology:true,
